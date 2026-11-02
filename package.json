@@ -1,0 +1,31 @@
+{
+  "name": "real-time-interview-assistant-poc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:web\" \"npm:dev:server\"",
+    "dev:web": "next dev",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "next build",
+    "start": "next start",
+    "start:server": "tsx server/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "groq-sdk": "^1.6.0",
+    "next": "14.2.31",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/ws": "^8.5.13",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
